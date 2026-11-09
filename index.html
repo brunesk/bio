@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bruno Ferracini | Curso, mentoria, gestão e sistema para vender na Shopee</title>
+<meta name="description" content="Tudo o que o Bruno Ferracini oferece para quem vende na Shopee: treinamento, mentoria individual, gestão de loja, sistema financeiro e calculadora grátis.">
+<meta name="theme-color" content="#F2601D">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Bruno Ferracini | Tudo para quem vende na Shopee">
+<meta property="og:description" content="Treinamento, mentoria, gestão de loja, sistema financeiro e calculadora grátis, num lugar só.">
+<meta property="og:image" content="https://brunesk.github.io/bio/bruno.jpg">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=DM+Mono:wght@400;500&family=Hanken+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --laranja:#F2601D;
+    --laranja-claro:#FF8A4C;
+    --tinta:#17120E;
+    --tinta-2:#5A4F43;
+    --papel:#F4ECDD;
+    --papel-2:#E9DDC8;
+    --etiqueta:#FFFDF8;
+    --verde:#0B6B41;
+    --titulo:"Big Shoulders Display",Impact,"Arial Narrow",sans-serif;
+    --texto:"Hanken Grotesk",system-ui,sans-serif;
+    --mono:"DM Mono",ui-monospace,Menlo,monospace;
+    --margem:16px;
+    --grao:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .13 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{font-family:var(--texto);background:var(--papel);color:var(--tinta);line-height:1.5;overflow-x:clip;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  ul{list-style:none}
+  .wrap{width:100%;max-width:1120px;margin:0 auto;padding-inline:var(--margem)}
+  a:focus-visible,summary:focus-visible{outline:3px solid var(--tinta);outline-offset:3px}
+  .topo a:focus-visible{outline-color:var(--etiqueta)}
+
+  /* ===== Topo ===== */
+  .topo{background:var(--laranja) var(--grao);padding:calc(20px + env(safe-area-inset-top)) 0 44px}
+  .topo .wrap{display:grid;gap:20px}
+  .perfil{display:flex;align-items:center;gap:22px}
+  .foto{position:relative;flex:none;width:88px;height:88px;transform:rotate(-3deg)}
+  .foto>img:first-child{width:100%;height:100%;object-fit:cover;border:3px solid var(--etiqueta);box-shadow:4px 4px 0 var(--tinta)}
+  .foto .selo{position:absolute;right:-13px;bottom:-11px;width:40px;height:40px;transform:rotate(11deg);border-radius:50%;box-shadow:0 0 0 2px var(--etiqueta)}
+  .perfil b{display:block;font-size:19px;font-weight:800;line-height:1.15}
+  .perfil a{display:inline-block;font-family:var(--mono);font-size:14px;font-weight:500;text-decoration:none;padding:7px 0}
+  .perfil a:hover{text-decoration:underline}
+  .perfil small{display:block;font-size:14px;font-weight:500;line-height:1.3}
+  h1{font-family:var(--titulo);font-weight:900;text-transform:uppercase;font-size:clamp(50px,14.6vw,118px);line-height:.96;letter-spacing:-.005em;margin-top:16px}
+  h1 em{font-style:normal;color:var(--etiqueta)}
+
+  .rotas h2{font-family:var(--mono);font-size:14px;font-weight:500;margin-bottom:10px}
+  .rotas ul{display:grid;gap:8px}
+  .rota{display:grid;grid-template-columns:1fr auto;align-items:center;gap:2px 12px;min-height:60px;padding:8px 14px;background:var(--etiqueta);border:2px solid var(--tinta);box-shadow:3px 3px 0 var(--tinta);text-decoration:none;transition:transform .14s ease,box-shadow .14s ease,background .14s ease}
+  .rota:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--tinta)}
+  .rota:active{transform:translate(3px,3px);box-shadow:0 0 0 var(--tinta)}
+  .rota strong{font-size:16.5px;font-weight:800;line-height:1.2}
+  .rota span{grid-column:1;font-family:var(--mono);font-size:12.5px;color:var(--tinta-2)}
+  .rota i{grid-column:2;grid-row:1 / span 2;font-family:var(--titulo);font-style:normal;font-weight:900;font-size:27px;line-height:1;transition:transform .14s ease}
+  .rota:hover i{transform:translateX(4px)}
+  .rota.gratis span{color:var(--verde);font-weight:500}
+
+  /* ===== Fita ===== */
+  .fita-area{position:relative;z-index:2;overflow:hidden;padding:12px 0;margin:-28px 0 -12px}
+  .fita{margin-inline:-14px;background:var(--tinta);color:var(--papel);transform:rotate(-1.4deg);overflow:hidden;padding:9px 0;box-shadow:0 5px 0 rgba(23,18,14,.12)}
+  .fita div{display:flex;width:max-content;animation:correr 30s linear infinite}
+  .fita span{font-family:var(--titulo);font-weight:800;font-size:20px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;padding-right:18px}
+  .fita span b{color:var(--laranja-claro);font-weight:800;padding-left:18px}
+  @keyframes correr{to{transform:translateX(-50%)}}
+
+  /* ===== Etiquetas ===== */
+  .ofertas{padding:56px 0 64px}
+  .cabeca{margin-bottom:26px}
+  .cabeca small{font-family:var(--mono);font-size:13px;color:var(--tinta-2)}
+  h2.grande{font-family:var(--titulo);font-weight:900;text-transform:uppercase;font-size:clamp(46px,12vw,76px);line-height:.92}
+  .grade{display:grid;gap:26px}
+  .etiqueta{position:relative;display:flex;flex-direction:column;background:var(--etiqueta);border:2px solid var(--tinta);box-shadow:6px 6px 0 var(--tinta);scroll-margin-top:18px}
+  .eti-topo{display:flex;justify-content:space-between;gap:10px;background:var(--tinta);color:var(--papel);font-family:var(--mono);font-size:12.5px;padding:8px 14px}
+  .eti-corpo{padding:18px 16px 20px;flex:1}
+  .etiqueta h3{font-family:var(--titulo);font-weight:900;text-transform:uppercase;font-size:40px;line-height:1.02}
+  .etiqueta p{margin-top:10px;font-size:16px;color:var(--tinta-2)}
+  .inclui{margin-top:14px;display:grid;gap:8px}
+  .inclui li{position:relative;padding-left:24px;font-size:15.5px;font-weight:500;line-height:1.35}
+  .inclui li::before{content:"";position:absolute;left:1px;top:.32em;width:12px;height:7px;border-left:2.5px solid var(--laranja);border-bottom:2.5px solid var(--laranja);transform:rotate(-45deg)}
+  .planos{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:16px}
+  .planos div{border:1.5px solid var(--tinta);padding:8px 6px;text-align:center}
+  .planos b{display:block;font-family:var(--titulo);font-weight:900;font-size:21px;line-height:1.05;white-space:nowrap}
+  .planos span{display:block;font-family:var(--mono);font-size:12px;line-height:1.25;color:var(--tinta-2)}
+  .picote{position:relative;border-top:2px dashed var(--tinta)}
+  .picote::before,.picote::after{content:"";position:absolute;top:-12px;width:22px;height:22px;border-radius:50%;background:var(--papel);border:2px solid var(--tinta)}
+  .picote::before{left:-13px;clip-path:inset(-2px -2px -2px 11px)}
+  .picote::after{right:-13px;clip-path:inset(-2px 11px -2px -2px)}
+  .eti-base{padding:15px 16px 16px}
+  .preco-linha{display:flex;justify-content:space-between;align-items:flex-end;gap:14px;margin-bottom:13px}
+  .preco small{display:block;font-family:var(--mono);font-size:12.5px;color:var(--tinta-2);margin-bottom:4px}
+  .preco strong{display:block;font-family:var(--titulo);font-weight:900;font-size:50px;line-height:.95}
+  .preco strong.txt{font-size:36px;line-height:1.05}
+  .preco strong u{text-decoration:none;font-size:22px;margin-left:3px}
+  .barras{flex:none;width:92px;height:38px;background:repeating-linear-gradient(90deg,var(--tinta) 0 2px,transparent 2px 5px,var(--tinta) 5px 6px,transparent 6px 8px,var(--tinta) 8px 12px,transparent 12px 14px,var(--tinta) 14px 15px,transparent 15px 19px)}
+  .cta{display:flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:12px 16px;text-align:center;background:var(--laranja);color:var(--tinta);border:2px solid var(--tinta);font-weight:800;font-size:17px;text-decoration:none;transition:background .14s ease,color .14s ease}
+  .cta:hover{background:var(--tinta);color:var(--etiqueta)}
+  .obs{margin-top:9px;font-family:var(--mono);font-size:12.5px;color:var(--tinta-2);text-align:center}
+  .carimbo{position:absolute;top:50px;right:10px;z-index:3;font-family:var(--titulo);font-weight:900;font-size:25px;text-transform:uppercase;color:var(--laranja);background:rgba(255,253,248,.88);border:3px solid var(--laranja);padding:0 10px;transform:rotate(9deg);opacity:0;pointer-events:none}
+  .etiqueta.marcada .carimbo{animation:carimbar .34s cubic-bezier(.2,1.4,.5,1) forwards}
+  @keyframes carimbar{from{opacity:0;transform:rotate(16deg) scale(2.4)}to{opacity:1;transform:rotate(9deg) scale(1)}}
+
+  /* ===== Sobre ===== */
+  .sobre{background:var(--tinta) var(--grao);color:var(--papel);padding:60px 0}
+  .sobre .wrap{display:grid;gap:26px}
+  .sobre figure{position:relative;width:min(190px,54%);transform:rotate(-2.5deg)}
+  .sobre figure>img:first-child{width:100%;aspect-ratio:1;object-fit:cover;border:5px solid var(--etiqueta)}
+  .sobre figure .selo{position:absolute;right:-26px;bottom:-20px;width:92px;height:92px;transform:rotate(9deg);border-radius:50%}
+  .sobre small{font-family:var(--mono);font-size:13px;color:var(--laranja-claro)}
+  .sobre p{margin-top:14px;font-size:17px;max-width:58ch;color:#E2D8C8}
+
+  /* ===== Dúvidas ===== */
+  .duvidas{padding:60px 0 20px}
+  .lista-duvidas{margin-top:22px;border-top:2px solid var(--tinta)}
+  details{border-bottom:2px solid var(--tinta)}
+  summary{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:60px;padding:12px 0;font-size:17.5px;font-weight:800;line-height:1.25;cursor:pointer;list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";flex:none;font-family:var(--titulo);font-weight:900;font-size:32px;line-height:1;color:var(--laranja)}
+  details[open] summary::after{content:"−"}
+  details p{padding:0 0 18px;font-size:16px;color:var(--tinta-2);max-width:66ch}
+  details a{font-weight:700}
+
+  /* ===== Contato ===== */
+  .contato{padding:44px 0 60px}
+  .caixa{background:var(--laranja) var(--grao);border:2px solid var(--tinta);box-shadow:6px 6px 0 var(--tinta);padding:26px 18px}
+  .caixa h2{font-family:var(--titulo);font-weight:900;text-transform:uppercase;font-size:clamp(44px,12vw,72px);line-height:1}
+  .caixa p{margin:12px 0 20px;font-size:17px;font-weight:500;max-width:48ch}
+  .caixa .cta{background:var(--tinta);color:var(--etiqueta)}
+  .caixa .cta:hover{background:var(--etiqueta);color:var(--tinta)}
+
+  footer{border-top:2px solid var(--tinta);padding:24px 0 calc(32px + env(safe-area-inset-bottom));font-size:13.5px;color:var(--tinta-2)}
+  footer nav{display:flex;flex-wrap:wrap;gap:4px 18px;margin-bottom:12px}
+  footer nav a{color:var(--tinta);font-weight:700;padding:6px 0}
+  footer p+p{margin-top:6px}
+
+  /* ===== Entrada ===== */
+  .entra{animation:subir .5s cubic-bezier(.2,.8,.3,1) both}
+  .rotas li{animation:subir .45s cubic-bezier(.2,.8,.3,1) both}
+  .rotas li:nth-child(1){animation-delay:.18s}.rotas li:nth-child(2){animation-delay:.24s}.rotas li:nth-child(3){animation-delay:.3s}.rotas li:nth-child(4){animation-delay:.36s}.rotas li:nth-child(5){animation-delay:.42s}
+  h1.entra{animation-delay:.08s}
+  @keyframes subir{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+  /* ===== Computador ===== */
+  @media(min-width:720px){
+    :root{--margem:28px}
+    .grade{grid-template-columns:1fr 1fr}
+    .etiqueta:nth-child(odd){transform:rotate(-.5deg)}
+    .etiqueta:nth-child(even){transform:rotate(.5deg)}
+    .etiqueta{transition:transform .18s ease}
+    .etiqueta:hover{transform:none}
+    .etiqueta.larga{grid-column:1 / -1;transform:rotate(-.25deg)}
+    .etiqueta.larga .miolo{display:grid;grid-template-columns:1.4fr 1fr}
+    .etiqueta.larga .picote{display:none}
+    .etiqueta.larga .eti-base{border-left:2px dashed var(--tinta);display:flex;flex-direction:column;justify-content:center}
+    .caixa{padding:38px 40px}
+    .sobre .wrap{grid-template-columns:320px 1fr;align-items:center;gap:60px}
+    .sobre figure{width:280px}
+  }
+  @media(min-width:980px){
+    .topo{padding:44px 0 76px}
+    .topo .wrap{grid-template-columns:1.12fr .88fr;gap:52px;align-items:center}
+    h1{font-size:clamp(84px,7.8vw,106px);margin-top:30px}
+    .ofertas{padding-top:84px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation:none!important;transition:none!important}
+    .etiqueta.marcada .carimbo{opacity:1}
+  }
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="wrap">
+    <div>
+      <div class="perfil entra">
+        <div class="foto">
+          <img src="bruno.jpg" alt="Foto de Bruno Ferracini" width="88" height="88">
+          <img class="selo" src="logo.png" alt="" width="40" height="40">
+        </div>
+        <div>
+          <b>Bruno Ferracini</b>
+          <a href="https://instagram.com/obrunoferracini">@obrunoferracini</a>
+          <small>Vendedor na Shopee e criador do Acelera Shopee</small>
+        </div>
+      </div>
+      <h1 class="entra">Tudo pra quem vende na Shopee, <em>num lugar só.</em></h1>
+    </div>
+
+    <nav class="rotas" aria-label="Escolha o que você procura">
+      <h2>O que você precisa agora?</h2>
+      <ul>
+        <li><a class="rota" href="#curso"><strong>Aprender a anunciar</strong><span>Treinamento · a partir de R$ 39</span><i aria-hidden="true">↓</i></a></li>
+        <li><a class="rota" href="#mentoria"><strong>Analisar minha loja com o Bruno</strong><span>Mentoria · R$ 300 no Pix</span><i aria-hidden="true">↓</i></a></li>
+        <li><a class="rota" href="#gestao"><strong>Ter quem cuide da minha loja</strong><span>Gestão de loja · sob consulta</span><i aria-hidden="true">↓</i></a></li>
+        <li><a class="rota" href="#sistema"><strong>Saber meu lucro de verdade</strong><span>Sistema · a partir de R$ 149,90/ano</span><i aria-hidden="true">↓</i></a></li>
+        <li><a class="rota gratis" href="#calculadora"><strong>Calcular meu preço de venda</strong><span>Calculadora · grátis</span><i aria-hidden="true">↓</i></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="fita-area" aria-hidden="true"><div class="fita">
+  <div>
+    <span>Treinamento<b>✦</b></span><span>Mentoria<b>✦</b></span><span>Gestão de loja<b>✦</b></span><span>Sistema financeiro<b>✦</b></span><span>Calculadora grátis<b>✦</b></span>
+    <span>Treinamento<b>✦</b></span><span>Mentoria<b>✦</b></span><span>Gestão de loja<b>✦</b></span><span>Sistema financeiro<b>✦</b></span><span>Calculadora grátis<b>✦</b></span>
+    <span>Treinamento<b>✦</b></span><span>Mentoria<b>✦</b></span><span>Gestão de loja<b>✦</b></span><span>Sistema financeiro<b>✦</b></span><span>Calculadora grátis<b>✦</b></span>
+    <span>Treinamento<b>✦</b></span><span>Mentoria<b>✦</b></span><span>Gestão de loja<b>✦</b></span><span>Sistema financeiro<b>✦</b></span><span>Calculadora grátis<b>✦</b></span>
+  </div>
+</div></div>
+
+<main>
+  <section class="ofertas">
+    <div class="wrap">
+      <div class="cabeca">
+        <small>Do primeiro anúncio à loja rodando</small>
+        <h2 class="grande">O que eu ofereço</h2>
+      </div>
+
+      <div class="grade">
+
+        <article class="etiqueta" id="curso">
+          <span class="carimbo" aria-hidden="true">É essa!</span>
+          <div class="eti-topo"><span>Nº 01</span><span>Pra aprender no seu ritmo</span></div>
+          <div class="eti-corpo">
+            <h3>Treinamento Acelera Shopee</h3>
+            <p>Aulas práticas de Shopee Ads e GMV Max, do básico ao ajuste fino, para você aplicar na sua própria loja.</p>
+            <ul class="inclui">
+              <li>Como montar, acompanhar e ajustar suas campanhas</li>
+              <li>Escolha de produtos e checklist do anúncio</li>
+              <li>Afiliados da Shopee e grupo de alunos</li>
+              <li>Acesso vitalício e garantia de 7 dias</li>
+            </ul>
+          </div>
+          <div class="picote"></div>
+          <div class="eti-base">
+            <div class="preco-linha">
+              <div class="preco"><small>a partir de</small><strong>R$ 39</strong></div>
+              <div class="barras" aria-hidden="true"></div>
+            </div>
+            <a class="cta" href="https://obrunoferracini.com.br/sv?utm_source=instagram&utm_medium=bio">Ver o treinamento</a>
+            <p class="obs">Completo com WhatsApp: R$ 79 ou 11x de R$ 8,77</p>
+          </div>
+        </article>
+
+        <article class="etiqueta" id="mentoria">
+          <span class="carimbo" aria-hidden="true">É essa!</span>
+          <div class="eti-topo"><span>Nº 02</span><span>Pra destravar sua loja</span></div>
+          <div class="eti-corpo">
+            <h3>Mentoria individual</h3>
+            <p>Uma conversa só nossa, em cima dos números da sua loja. Você sai sabendo qual é o próximo passo.</p>
+            <ul class="inclui">
+              <li>De 1 a 3 horas exclusivas comigo</li>
+              <li>Análise da loja, dos anúncios e do seu ADS</li>
+              <li>Plano de ação feito para o seu caso</li>
+              <li>Suporte vitalício pelo WhatsApp depois</li>
+            </ul>
+          </div>
+          <div class="picote"></div>
+          <div class="eti-base">
+            <div class="preco-linha">
+              <div class="preco"><small>no Pix</small><strong>R$ 300</strong></div>
+              <div class="barras" aria-hidden="true"></div>
+            </div>
+            <a class="cta" href="https://mentoria.obrunoferracini.com.br/agendar.html">Escolher meu horário</a>
+            <p class="obs">No cartão: R$ 315,76</p>
+          </div>
+        </article>
+
+        <article class="etiqueta" id="gestao">
+          <span class="carimbo" aria-hidden="true">É essa!</span>
+          <div class="eti-topo"><span>Nº 03</span><span>Pra não fazer sozinho</span></div>
+          <div class="eti-corpo">
+            <h3>Gestão de loja</h3>
+            <p>Acompanhamos sua loja todos os meses e cuidamos do que mais pesa na rotina de quem vende.</p>
+            <ul class="inclui">
+              <li>Ajustes na loja e nos anúncios</li>
+              <li>Shopee Ads com meta de ROAS definida por loja</li>
+              <li>Programa de afiliados da Shopee</li>
+              <li>Acompanhamento direto e renovação mensal</li>
+            </ul>
+          </div>
+          <div class="picote"></div>
+          <div class="eti-base">
+            <div class="preco-linha">
+              <div class="preco"><small>valor mensal</small><strong class="txt">Sob consulta</strong></div>
+              <div class="barras" aria-hidden="true"></div>
+            </div>
+            <a class="cta" href="https://wa.me/5513996273325?text=Oi%20Bruno!%20Vim%20pelo%20Instagram%20e%20quero%20saber%20sobre%20a%20gest%C3%A3o%20da%20minha%20loja%20na%20Shopee.">Pedir valor no WhatsApp</a>
+            <p class="obs">Me manda o link da sua loja na conversa</p>
+          </div>
+        </article>
+
+        <article class="etiqueta" id="sistema">
+          <span class="carimbo" aria-hidden="true">É essa!</span>
+          <div class="eti-topo"><span>Nº 04</span><span>Pra enxergar os números</span></div>
+          <div class="eti-corpo">
+            <h3>Acelera Gestão Financeira</h3>
+            <p>O sistema que mostra quanto sobra de verdade na sua loja depois de taxas, custos e anúncios.</p>
+            <ul class="inclui">
+              <li>Lucro real mês a mês</li>
+              <li>Custos, estoque, ADS e metas no mesmo lugar</li>
+              <li>Precificação e alertas para cada loja</li>
+            </ul>
+            <div class="planos">
+              <div><b>R$ 149,90</b><span>1 loja</span></div>
+              <div><b>R$ 397</b><span>até 3 lojas</span></div>
+              <div><b>R$ 697</b><span>até 10 lojas</span></div>
+            </div>
+          </div>
+          <div class="picote"></div>
+          <div class="eti-base">
+            <div class="preco-linha">
+              <div class="preco"><small>por 12 meses, a partir de</small><strong>R$ 149,90</strong></div>
+              <div class="barras" aria-hidden="true"></div>
+            </div>
+            <a class="cta" href="https://meuacelera.com.br/?utm_source=instagram&utm_medium=bio">Conhecer o sistema</a>
+            <p class="obs">Pix ou cartão em até 12x</p>
+          </div>
+        </article>
+
+        <article class="etiqueta larga" id="calculadora">
+          <span class="carimbo" aria-hidden="true">É essa!</span>
+          <div class="eti-topo"><span>Nº 05</span><span>Pra usar agora</span></div>
+          <div class="miolo">
+            <div class="eti-corpo">
+              <h3>Calculadora de taxas</h3>
+              <p>Coloque o custo do produto e veja o preço de venda, o lucro e a margem, já com as taxas da Shopee, do Mercado Livre e do TikTok Shop.</p>
+            </div>
+            <div class="picote"></div>
+            <div class="eti-base">
+              <div class="preco-linha">
+                <div class="preco"><small>sem pagar nada</small><strong>Grátis</strong></div>
+                <div class="barras" aria-hidden="true"></div>
+              </div>
+              <a class="cta" href="https://meuacelera.com.br/calculadora/?utm_source=instagram&utm_medium=bio">Usar a calculadora</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="sobre">
+    <div class="wrap">
+      <figure>
+        <img src="bruno.jpg" alt="Bruno Ferracini" width="520" height="520" loading="lazy">
+        <img class="selo" src="logo.png" alt="Logo Acelera Shopee" width="92" height="92" loading="lazy">
+      </figure>
+      <div>
+        <small>Quem está por trás</small>
+        <h2 class="grande">Prazer, Bruno</h2>
+        <p>Antes de vender online, tentei várias coisas e mantive uma loja física. Foi ali que aprendi na prática o que é vender e cuidar de um negócio.</p>
+        <p>Levei essa experiência para os marketplaces, aprendi com erros e acertos e organizei tudo em um caminho claro, para você não precisar passar pelos mesmos tropeços.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="duvidas">
+    <div class="wrap">
+      <h2 class="grande">Dúvidas</h2>
+      <div class="lista-duvidas">
+        <details>
+          <summary>Não sei qual escolher. Por onde começo?</summary>
+          <p>Se você ainda está aprendendo, comece pelo treinamento. Se já vende e quer alguém olhando seus números com você, a mentoria é o caminho. Se prefere não cuidar disso sozinho, fale comigo sobre a gestão. E na dúvida, <a href="https://wa.me/5513996273325?text=Oi%20Bruno!%20Vim%20pelo%20Instagram%20e%20queria%20ajuda%20para%20escolher%20o%20melhor%20servi%C3%A7o%20para%20minha%20loja.">me chama no WhatsApp</a>.</p>
+        </details>
+        <details>
+          <summary>Preciso ter experiência com anúncios?</summary>
+          <p>Não. O treinamento começa do básico. O que ajuda é já ter, ou estar montando, uma loja na Shopee para aplicar o conteúdo.</p>
+        </details>
+        <details>
+          <summary>Quais são as formas de pagamento?</summary>
+          <p>Treinamento: cartão em até 11x ou Pix. Mentoria: Pix ou cartão. Sistema: Pix ou cartão em até 12x. Gestão de loja: combinamos pelo WhatsApp.</p>
+        </details>
+        <details>
+          <summary>Vocês garantem resultado?</summary>
+          <p>Não. O resultado depende do produto, do preço, da concorrência, do investimento e de como cada loja aplica o que foi combinado. O que eu ofereço é método, análise e acompanhamento.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="contato">
+    <div class="wrap">
+      <div class="caixa">
+        <h2>Ficou em dúvida? Me chama.</h2>
+        <p>Me conta como está sua loja que eu te digo o que faz sentido para o seu momento.</p>
+        <a class="cta" href="https://wa.me/5513996273325?text=Oi%20Bruno!%20Vim%20pelo%20Instagram%20e%20tenho%20uma%20d%C3%BAvida.">Falar no WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <nav aria-label="Links do rodapé">
+      <a href="https://instagram.com/obrunoferracini">Instagram</a>
+      <a href="https://wa.me/5513996273325">WhatsApp</a>
+      <a href="https://meuacelera.com.br/privacidade.html">Privacidade</a>
+      <a href="https://meuacelera.com.br/termos.html">Termos</a>
+    </nav>
+    <p>Os resultados dependem de cada loja, produto, investimento e aplicação do conteúdo.</p>
+    <p>Este site não é afiliado à Shopee nem à Meta. As marcas citadas pertencem aos seus donos.</p>
+    <p>© 2026 Bruno Ferracini</p>
+  </div>
+</footer>
+
+<script>
+  // Ao tocar numa opção do topo, a etiqueta escolhida recebe o carimbo "É essa!"
+  document.querySelectorAll('.rota').forEach(function (link) {
+    link.addEventListener('click', function () {
+      var alvo = document.querySelector(link.getAttribute('href'));
+      if (!alvo) return;
+      document.querySelectorAll('.etiqueta.marcada').forEach(function (e) { e.classList.remove('marcada'); });
+      setTimeout(function () { alvo.classList.add('marcada'); }, 480);
+    });
+  });
+</script>
+</body>
+</html>
