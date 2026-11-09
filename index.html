@@ -111,6 +111,44 @@
   .etiqueta.marcada .carimbo{animation:carimbar .34s cubic-bezier(.2,1.4,.5,1) forwards}
   @keyframes carimbar{from{opacity:0;transform:rotate(16deg) scale(2.4)}to{opacity:1;transform:rotate(9deg) scale(1)}}
 
+  /* ===== Resultados ===== */
+  .ver-provas{display:flex;align-items:center;justify-content:center;gap:8px;min-height:46px;margin-top:8px;font-weight:800;font-size:16px;text-underline-offset:3px}
+  .provas{padding:60px 0 64px;background:var(--papel-2);border-top:2px solid var(--tinta)}
+  .provas{scroll-margin-top:0}
+  .casos{display:grid;gap:22px}
+  .caso{background:var(--etiqueta);border:2px solid var(--tinta);box-shadow:5px 5px 0 var(--tinta);display:flex;flex-direction:column}
+  .caso-nome{display:flex;justify-content:space-between;gap:10px;font-family:var(--mono);font-size:13px;background:var(--tinta);color:var(--papel);padding:8px 14px}
+  .ad{display:grid;grid-template-columns:1fr 1fr;flex:1}
+  .ad>div{padding:14px 13px 16px}
+  .ad b{display:block;font-family:var(--titulo);font-weight:900;font-size:25px;letter-spacing:.02em;line-height:1;margin-bottom:8px}
+  .ad p{font-size:15.5px;font-weight:500;line-height:1.32}
+  .antes{background:var(--papel)}
+  .antes b{color:var(--tinta-2)}
+  .depois{background:var(--laranja)}
+  .print{position:relative;display:block;width:100%;padding:0;border:0;border-top:2px solid var(--tinta);background:#111B21;cursor:zoom-in;font:inherit;color:inherit}
+  .print img{width:100%;display:block}
+  .print.corte img{height:310px;object-fit:cover;object-position:center top}
+  .print.corte.baixo img{object-position:center bottom}
+  .print span{position:absolute;right:9px;bottom:9px;background:var(--etiqueta);border:2px solid var(--tinta);font-family:var(--mono);font-size:12.5px;font-weight:500;padding:3px 9px}
+  .print:focus-visible{outline:3px solid var(--laranja);outline-offset:-3px}
+  .sub-provas{font-family:var(--titulo);font-weight:900;text-transform:uppercase;font-size:38px;line-height:1;margin:42px 0 16px}
+  .numeros{display:grid;gap:18px}
+  .numeros figure{background:var(--etiqueta);border:2px solid var(--tinta);box-shadow:4px 4px 0 var(--tinta)}
+  .numeros .print{border-top:0}
+  .numeros figcaption{border-top:2px solid var(--tinta);padding:11px 13px}
+  .numeros figcaption strong{display:block;font-family:var(--titulo);font-weight:900;font-size:29px;line-height:1.05}
+  .numeros figcaption span{font-size:14.5px;color:var(--tinta-2)}
+  .mural{display:grid;gap:14px}
+  .mural figure{border:2px solid var(--tinta);box-shadow:4px 4px 0 var(--tinta);background:var(--etiqueta);break-inside:avoid}
+  .mural .print{border-top:0}
+  .mural .print span{display:none}
+  .mural figcaption{border-top:2px solid var(--tinta);font-family:var(--mono);font-size:12.5px;padding:7px 12px}
+  .aviso-provas{margin-top:26px;font-size:14px;color:var(--tinta-2);max-width:70ch}
+  dialog{margin:auto;max-width:min(94vw,560px);max-height:92vh;padding:0;border:2px solid var(--tinta);background:#111B21;overflow:auto}
+  dialog::backdrop{background:rgba(23,18,14,.84)}
+  dialog img{display:block;width:100%;height:auto}
+  dialog button{position:sticky;top:0;display:block;width:100%;min-height:48px;background:var(--etiqueta);border:0;border-bottom:2px solid var(--tinta);font:800 16px var(--texto);color:var(--tinta);cursor:pointer}
+
   /* ===== Sobre ===== */
   .sobre{background:var(--tinta) var(--grao);color:var(--papel);padding:60px 0}
   .sobre .wrap{display:grid;gap:26px}
@@ -154,7 +192,10 @@
   /* ===== Computador ===== */
   @media(min-width:720px){
     :root{--margem:28px}
-    .grade{grid-template-columns:1fr 1fr}
+    .grade,.casos{grid-template-columns:1fr 1fr}
+    .numeros{grid-template-columns:repeat(3,1fr);align-items:start}
+    .mural{display:block;columns:2;column-gap:18px}
+    .mural figure{margin-bottom:18px}
     .etiqueta:nth-child(odd){transform:rotate(-.5deg)}
     .etiqueta:nth-child(even){transform:rotate(.5deg)}
     .etiqueta{transition:transform .18s ease}
@@ -208,6 +249,7 @@
         <li><a class="rota" href="#sistema"><strong>Saber meu lucro de verdade</strong><span>Sistema · a partir de R$ 149,90/ano</span><i aria-hidden="true">↓</i></a></li>
         <li><a class="rota gratis" href="#calculadora"><strong>Calcular meu preço de venda</strong><span>Calculadora · grátis</span><i aria-hidden="true">↓</i></a></li>
       </ul>
+      <a class="ver-provas" href="#resultados">Ver prints e antes x depois de alunos ↓</a>
     </nav>
   </div>
 </header>
@@ -354,6 +396,96 @@
     </div>
   </section>
 
+  <section class="provas" id="resultados">
+    <div class="wrap">
+      <div class="cabeca">
+        <small>Com as palavras e os prints de quem aplicou</small>
+        <h2 class="grande">Antes x depois</h2>
+      </div>
+
+      <div class="casos">
+        <article class="caso">
+          <div class="caso-nome"><span>Raquel</span><span>Shopee Ads</span></div>
+          <div class="ad">
+            <div class="antes"><b>Antes</b><p>“ROAS mais alto sempre girou em torno de 8 a 11”</p></div>
+            <div class="depois"><b>Depois</b><p>“hoje 26 muitoooooo Obrigada suas dicas tem me ajudado muito !!!”</p></div>
+          </div>
+          <button class="print corte baixo" type="button" data-print="prints/caso-raquel.webp"><img src="prints/caso-raquel.webp" alt="Print da conversa em que Raquel conta que o ROAS era de 8 a 11 e mostra ROAS de 26,62" loading="lazy"><span>Ampliar</span></button>
+        </article>
+
+        <article class="caso">
+          <div class="caso-nome"><span>Willian</span><span>Já vendia há anos</span></div>
+          <div class="ad">
+            <div class="antes"><b>Antes</b><p>“sempre tive medo e receio de usar o ADS”</p></div>
+            <div class="depois"><b>Depois</b><p>“Já estou colhendo os frutos!”</p></div>
+          </div>
+          <button class="print corte baixo" type="button" data-print="prints/caso-willian.webp"><img src="prints/caso-willian.webp" alt="Print da mensagem de Willian com o painel de anúncios da loja" loading="lazy"><span>Ampliar</span></button>
+        </article>
+
+        <article class="caso">
+          <div class="caso-nome"><span>Fábio</span><span>Vende há anos em marketplaces</span></div>
+          <div class="ad">
+            <div class="antes"><b>Antes</b><p>“eu queimava dinheiro no ads”</p></div>
+            <div class="depois"><b>Depois</b><p>“eu continuo vendendo e o dinheiro não tá indo igual o tigrinho kkkk”</p></div>
+          </div>
+          <button class="print corte" type="button" data-print="prints/caso-fabio.webp"><img src="prints/caso-fabio.webp" alt="Print da mensagem de Fábio contando o que mudou nos anúncios" loading="lazy"><span>Ampliar</span></button>
+        </article>
+
+        <article class="caso">
+          <div class="caso-nome"><span>Osiris</span><span>Terminou o curso</span></div>
+          <div class="ad">
+            <div class="antes"><b>Antes</b><p>“Eu já gastei uns 2.000 R$ em cursos”</p></div>
+            <div class="depois"><b>Depois</b><p>“nunca tive esse resultado antes”</p></div>
+          </div>
+          <button class="print corte" type="button" data-print="prints/caso-osiris.webp"><img src="prints/caso-osiris.webp" alt="Print da conversa de Osiris com o painel da loja e o relato depois de aplicar o curso" loading="lazy"><span>Ampliar</span></button>
+        </article>
+      </div>
+
+      <h3 class="sub-provas">Números que os alunos mandaram</h3>
+      <div class="numeros">
+        <figure>
+          <button class="print" type="button" data-print="prints/res-roas-22.webp"><img src="prints/res-roas-22.webp" alt="Painel de anúncios com receita de R$ 2,57 mil, investimento de R$ 115,10 e ROAS de 22,35" loading="lazy"><span>Ampliar</span></button>
+          <figcaption><strong>ROAS 22,35</strong><span>R$ 2,57 mil de receita com R$ 115,10 em anúncios, em um dia</span></figcaption>
+        </figure>
+        <figure>
+          <button class="print" type="button" data-print="prints/res-roas-23.webp"><img src="prints/res-roas-23.webp" alt="Painel de anúncios com receita de R$ 1,35 mil, investimento de R$ 56,60 e ROAS de 23,77" loading="lazy"><span>Ampliar</span></button>
+          <figcaption><strong>ROAS 23,77</strong><span>R$ 1,35 mil de receita com R$ 56,60 em anúncios, em um dia</span></figcaption>
+        </figure>
+        <figure>
+          <button class="print" type="button" data-print="prints/res-vendas.webp"><img src="prints/res-vendas.webp" alt="Painel da loja com R$ 5,69 mil em vendas e 249 pedidos" loading="lazy"><span>Ampliar</span></button>
+          <figcaption><strong>249 pedidos</strong><span>R$ 5,69 mil em vendas, no painel da loja</span></figcaption>
+        </figure>
+      </div>
+
+      <h3 class="sub-provas">O que dizem</h3>
+      <div class="mural">
+        <figure>
+          <button class="print" type="button" data-print="prints/dep-marcella.webp"><img src="prints/dep-marcella.webp" alt="Marcella elogia o atendimento do Bruno: diz que ele responde sempre, no privado ou no grupo" loading="lazy"><span>Ampliar</span></button>
+          <figcaption>Marcella · no grupo de alunos</figcaption>
+        </figure>
+        <figure>
+          <button class="print" type="button" data-print="prints/dep-patricia.webp"><img src="prints/dep-patricia.webp" alt="Patricia comenta que comprou o curso, está encantada com as dicas e que nem a consultoria de R$ 2.000 fez o que o Bruno ensina" loading="lazy"><span>Ampliar</span></button>
+          <figcaption>Patricia · comentário no Facebook</figcaption>
+        </figure>
+        <figure>
+          <button class="print" type="button" data-print="prints/dep-daniela.webp"><img src="prints/dep-daniela.webp" alt="Daniela conta que não está dando conta dos pedidos e que isso aconteceu após o curso" loading="lazy"><span>Ampliar</span></button>
+          <figcaption>Daniela · loja de personalizados</figcaption>
+        </figure>
+        <figure>
+          <button class="print" type="button" data-print="prints/dep-tatiana.webp"><img src="prints/dep-tatiana.webp" alt="Tatiana diz que já fez outros cursos e que só neste conseguiu entender sobre o ADS" loading="lazy"><span>Ampliar</span></button>
+          <figcaption>Tatiana · aluna do curso</figcaption>
+        </figure>
+      </div>
+
+      <p class="aviso-provas">Prints reais enviados por alunos em grupos e mensagens. Sobrenomes, telefones e fotos foram escondidos por privacidade. Os números mostram dias específicos de lojas específicas: cada resultado depende do produto, do preço, da concorrência, do investimento e da aplicação, e não é promessa de que o mesmo vai acontecer com você.</p>
+    </div>
+  </section>
+
+  <dialog id="zoom" aria-label="Print ampliado">
+    <button type="button" id="zoom-fechar">Fechar ✕</button>
+    <img id="zoom-img" alt="">
+  </dialog>
+
   <section class="sobre">
     <div class="wrap">
       <figure>
@@ -428,6 +560,20 @@
       setTimeout(function () { alvo.classList.add('marcada'); }, 480);
     });
   });
+
+  // Toque num print para ver inteiro
+  var zoom = document.getElementById('zoom');
+  var zoomImg = document.getElementById('zoom-img');
+  document.querySelectorAll('[data-print]').forEach(function (botao) {
+    botao.addEventListener('click', function () {
+      zoomImg.src = botao.getAttribute('data-print');
+      zoomImg.alt = botao.querySelector('img').alt;
+      zoom.showModal();
+      zoom.scrollTop = 0;
+    });
+  });
+  document.getElementById('zoom-fechar').addEventListener('click', function () { zoom.close(); });
+  zoom.addEventListener('click', function (e) { if (e.target === zoom) zoom.close(); });
 </script>
 </body>
 </html>
